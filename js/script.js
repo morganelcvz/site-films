@@ -7,7 +7,7 @@ fetch("js/movies.json")
     const results = data.results
 
     results.forEach(film => {
-        document.getElementById(myMovies).innerHTML = `
+        document.getElementById("myMovies").innerHTML = `
             <div class="movie-card">
                     <div class="title-movie">${film.title}</div>
                     <img src="https://image.tmdb.org/t/p/original${film.poster_path}">
@@ -19,6 +19,3 @@ fetch("js/movies.json")
         `;
     });
 }
-
-
-
