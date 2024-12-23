@@ -3,6 +3,9 @@ body {
   margin: 0px;
   background: linear-gradient(#FFF, #AEDBEC);
   min-height: 100vh;
+  /*********Barre de Navigation*********/
+  /*********SECTION TITRE ET RECHERCHE*********/
+  /*********SECTION FILMS*********/
 }
 body nav {
   width: 100%;
@@ -97,6 +100,7 @@ body .movies {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 50px 0px;
+  gap: 1.5rem;
 }
 body .movies .movie-card {
   width: 18%;
@@ -104,16 +108,27 @@ body .movies .movie-card {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px;
 }
 body .movies .movie-card img {
   width: 100%;
+  border-radius: 20px 20px 0px 0px;
 }
-body .movies .movie-card .title-movie {
+body .movies .movie-card .date-movie {
   font-family: montserrat;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 15px 0px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 500;
+  background: rgba(174, 219, 236, 0.5);
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  top: -0.3rem;
+  left: 5.5rem;
+  margin-top: -2.5rem;
 }
 body .movies .movie-card .head-movie {
   display: flex;
@@ -121,6 +136,7 @@ body .movies .movie-card .head-movie {
   align-items: center;
   padding: 10px 0px;
   justify-content: center;
+  padding: 10px;
 }
 body .movies .movie-card .head-movie .note {
   border-radius: 100%;
@@ -150,10 +166,10 @@ body .movies .movie-card .head-movie .note span {
   position: relative;
   top: -2rem;
 }
-body .movies .movie-card .head-movie .date-movie {
+body .movies .movie-card .head-movie .title-movie {
   font-family: montserrat;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  color: #000;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  padding: 15px 0px;
 }/*# sourceMappingURL=style.css.map */

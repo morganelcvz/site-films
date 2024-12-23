@@ -4,6 +4,8 @@ body {
     background: linear-gradient(#FFF, #AEDBEC);
     min-height: 100vh;
 
+    /*********Barre de Navigation*********/
+
     nav {
         width: 100%;
         background: #fff;
@@ -16,7 +18,7 @@ body {
         overflow: hidden;
         gap: 3rem;
         position: fixed;
-        z-index:99;
+        z-index: 99;
 
         i {
             font-size: 4.5rem;
@@ -48,6 +50,8 @@ body {
             }
         }
     }
+
+    /*********SECTION TITRE ET RECHERCHE*********/
 
     .movie-top {
         width: 100%;
@@ -101,6 +105,8 @@ body {
         }
     }
 
+    /*********SECTION FILMS*********/
+
     .movies {
         width: 100%;
         display: flex;
@@ -108,6 +114,7 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 50px 0px;
+        gap:1.5rem;
 
         .movie-card {
             width: 18%;
@@ -115,25 +122,37 @@ body {
             border-radius: 20px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin:0px 10px;
 
             img {
-                width:100%;
+                width: 100%;
+                border-radius: 20px 20px 0px 0px;
             }
 
-            .title-movie {
+            .date-movie {
                 font-family: montserrat;
-                font-weight:bold;
-                font-size:1.2rem;
-                text-align:center;
-                padding:15px 0px;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                color: #fff;
+                font-weight: 500;
+                background:rgba(174, 219, 236, 0.5);
+                padding:10px;
+                border-radius:15px;
+                position:relative;
+                top:-0.3rem;
+                left:5.5rem;
+                margin-top:-2.5rem;
             }
 
             .head-movie {
-                display:flex;
+                display: flex;
                 flex-direction: row;
                 align-items: center;
-                padding:10px 0px;
+                padding: 10px 0px;
                 justify-content: center;
+                padding:10px;
 
                 .note {
                     border-radius: 100%;
@@ -144,8 +163,8 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    width:40px;
-                    height:40px;
+                    width: 40px;
+                    height: 40px;
 
                     i {
                         color: rgba(174, 219, 236, 1);
@@ -166,13 +185,14 @@ body {
                     }
                 }
 
-                .date-movie {
+                .title-movie {
                     font-family: montserrat;
-                    text-transform:uppercase;
-                    font-size:0.9rem;
-                    color:#000;
-                    font-weight: 500;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    text-align: center;
+                    padding: 15px 0px;
                 }
+
             }
         }
     }
