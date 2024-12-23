@@ -1,13 +1,178 @@
 body {
-    padding:0px;
-    margin:0px;
-
-    h1 {
-        color:red;
-        font-family: montserrat;
-    }
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(#FFF, #AEDBEC);
+    min-height: 100vh;
 
     nav {
-        width:100%;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #aeb4ce;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80px;
+        overflow: hidden;
+        gap: 3rem;
+        position: fixed;
+
+        i {
+            font-size: 4.5rem;
+            color: rgba(174, 219, 236, 0.8);
+        }
+
+        a {
+            font-family: montserrat;
+            text-decoration: none;
+            color: rgba(62, 83, 195, 0.8);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        span {
+            padding: 20px;
+            position: relative;
+            margin-left: -5.8rem;
+
+            a {
+                font-size: 2.5rem;
+                color: #3e53c3;
+                text-decoration: none;
+                font-weight: 800;
+                font-family: montserrat;
+                text-transform: uppercase;
+                paint-order: stroke fill;
+                -webkit-text-stroke: 3px #fff;
+            }
+        }
+    }
+
+    .movie-top {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 50px 0px;
+        position: relative;
+        top: 4rem;
+
+        .title {
+            font-family: montserrat;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 0px 20px;
+            font-weight: 500;
+
+            i {
+                color: rgba(62, 83, 195, 0.8);
+            }
+        }
+
+        .search {
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            i {
+                padding: 15px;
+                border: 1.5px solid rgba(62, 83, 195, 0.8);
+                border-radius: 100%;
+                background: #fff;
+                position: relative;
+                z-index: 2;
+                color: rgba(174, 219, 236, 1);
+                font-size: 1.5rem;
+            }
+
+            input {
+                width: 30%;
+                border-radius: 20px;
+                border: 1.5px solid rgba(62, 83, 195, 0.8);
+                padding: 10px 5px 10px 35px;
+                position: relative;
+                left: -2rem;
+                z-index: 1;
+            }
+        }
+    }
+
+    .movies {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 50px 0px;
+
+        .movie-card {
+            width: 18%;
+            background: #fff;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width:100%;
+            }
+
+            .title-movie {
+                font-family: montserrat;
+                font-weight:bold;
+                font-size:1.2rem;
+                text-align:center;
+                padding:15px 0px;
+            }
+
+            .head-movie {
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                padding:10px 0px;
+                justify-content: center;
+
+                .note {
+                    border-radius: 100%;
+                    padding: 15px;
+                    background: #fff;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width:40px;
+                    height:40px;
+
+                    i {
+                        color: rgba(174, 219, 236, 1);
+                        font-size: 4rem;
+                        position: relative;
+                        top: 0.5rem;
+                    }
+
+                    span {
+                        font-family: montserrat;
+                        color: rgba(62, 83, 195, 0.8);
+                        font-weight: 800;
+                        font-size: 1.2rem;
+                        paint-order: stroke fill;
+                        -webkit-text-stroke: 3px #fff;
+                        position: relative;
+                        top: -2rem;
+                    }
+                }
+
+                .date-movie {
+                    font-family: montserrat;
+                    text-transform:uppercase;
+                    font-size:0.9rem;
+                    color:#000;
+                    font-weight: 500;
+                }
+            }
+        }
     }
 }

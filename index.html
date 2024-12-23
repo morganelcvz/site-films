@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
-    <link rel="stylesheet" href="css/style.scss">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,19 +15,41 @@
 </head>
 
 <body>
-    <h1>coucou</h1>
     <nav>
-        <i class="fa-solid fa-star"></i> <span><i class="fa-solid fa-video"></i> star-ing</span> <a href="#">Films</a> <a href="#">Recherche</a>
+        <i class="fa-solid fa-star"></i><span><a href="index.html">star-ing</a></span> <a href="#">Films</a> <a href="#">Recherche</a>
     </nav>
     <section class="movie-top">
-        <div class="title">Movies</div>
+        <div class="title"><i class="fa-solid fa-video"></i> Movies</div>
         <div class="search">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" id="search" name="search"/>
         </div>
     </section>
     <section class="movies">
-
+        <div class="movie-card">
+            <div class="title-movie">Titre du film long</div>
+            <img src="https://placehold.co/230x300.png">
+            <div class="head-movie">
+                <div class="note"><i class="fa-regular fa-star"></i><span>9.2</span></div>
+                <div class="date-movie">22 septembre 2024</div>
+            </div>
+        </div>
+        <div class="movie-card">
+            <div class="title-movie">Titre du film long</div>
+            <img src="https://placehold.co/230x300.png">
+            <div class="head-movie">
+                <div class="note"><i class="fa-regular fa-star"></i><span>9.2</span></div>
+                <div class="date-movie">22 septembre 2024</div>
+            </div>
+        </div>
+        <div class="movie-card">
+            <div class="title-movie">Titre du film long</div>
+            <img src="https://placehold.co/230x300.png">
+            <div class="head-movie">
+                <div class="note"><i class="fa-regular fa-star"></i><span>9.2</span></div>
+                <div class="date-movie">22 septembre 2024</div>
+            </div>
+        </div>
     </section>
     <script src="js/script.js"></script>
 </body>
