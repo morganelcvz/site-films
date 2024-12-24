@@ -13,31 +13,49 @@ body nav {
   border-bottom: 1px solid #aeb4ce;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
   height: 80px;
   overflow: hidden;
   gap: 3rem;
   position: fixed;
   z-index: 99;
 }
-body nav i {
+@media (max-width: 575px) {
+  body nav {
+    gap: 2rem;
+    flex-direction: column;
+  }
+}
+body nav .info-nav {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body nav .info-nav i {
   font-size: 4.5rem;
   color: rgba(174, 219, 236, 0.8);
 }
-body nav a {
+body nav .info-nav a {
   font-family: montserrat;
   text-decoration: none;
   color: rgba(62, 83, 195, 0.8);
   font-weight: bold;
   font-size: 1.5rem;
 }
-body nav span {
+@media (max-width: 575px) {
+  body nav .info-nav a {
+    font-size: 1.2rem;
+  }
+}
+body nav .info-nav span {
   padding: 20px;
   position: relative;
   margin-left: -5.8rem;
+  width: 230px;
 }
-body nav span a {
+body nav .info-nav span a {
   font-size: 2.5rem;
   color: #3e53c3;
   text-decoration: none;
@@ -46,6 +64,30 @@ body nav span a {
   text-transform: uppercase;
   paint-order: stroke fill;
   -webkit-text-stroke: 3px #fff;
+}
+@media (max-width: 575px) {
+  body nav .info-nav span a {
+    font-size: 2rem;
+  }
+}
+body nav .connect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0px 15px;
+}
+body nav .connect a {
+  font-family: montserrat;
+  text-decoration: none;
+  color: rgba(62, 83, 195, 0.8);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+body nav .connect i {
+  color: rgba(174, 219, 236, 0.8);
+  font-size: 2.5rem;
 }
 body .movie-top {
   width: 100%;
@@ -57,12 +99,23 @@ body .movie-top {
   position: relative;
   top: 4rem;
 }
+@media (max-width: 575px) {
+  body .movie-top {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 body .movie-top .title {
   font-family: montserrat;
   font-size: 2rem;
   text-transform: uppercase;
   padding: 0px 20px;
   font-weight: 500;
+}
+@media (max-width: 575px) {
+  body .movie-top .title {
+    font-size: 2.5rem;
+  }
 }
 body .movie-top .title i {
   color: rgba(62, 83, 195, 0.8);
@@ -73,6 +126,11 @@ body .movie-top .search {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+@media (max-width: 575px) {
+  body .movie-top .search {
+    width: 70%;
+  }
 }
 body .movie-top .search i {
   padding: 15px;
@@ -93,6 +151,11 @@ body .movie-top .search input {
   left: -2rem;
   z-index: 1;
 }
+@media (max-width: 575px) {
+  body .movie-top .search input {
+    width: 100%;
+  }
+}
 body .movies {
   width: 100%;
   display: flex;
@@ -103,7 +166,7 @@ body .movies {
   gap: 1.5rem;
 }
 body .movies .movie-card {
-  width: 18%;
+  width: 280px;
   background: #fff;
   border-radius: 20px;
   display: flex;
