@@ -334,7 +334,7 @@ body .cast {
   display: flex;
   flex-direction: row;
   gap: 0rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   margin-top: 10rem;
@@ -345,7 +345,7 @@ body .cast .actors {
   display: flex;
   flex-direction: row;
   gap: 0rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 body .cast .actors .actors-profile {

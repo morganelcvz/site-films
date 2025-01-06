@@ -1,41 +1,42 @@
-// const options = {
-//     method: 'GET',
-//     headers: {
-//       accept: 'application/json',
-//       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5NTRkOGQ5ODkxNjdlZjBjODE5MDkwZDA4NTg2MjBlOCIsIm5iZiI6MTczNTgwNDYxMC44NDYwMDAyLCJzdWIiOiI2Nzc2NDZjMjViOGY0MjJiNjAxMmUxNWYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.IiBc4taQH9FDBM5PuexHYruPI7a-OJ1s3BIjaR3fK9I'
-//     }
-//   };
-  
-//   fetch('https://api.themoviedb.org/3/movie/movie_id?language=fr-FR', options)
-//     .then(res => res.json())
-//     .then(res => console.log(res))
-//     .catch(err => console.error(err));
+const options = {
+    method: 'GET',
+    headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5NTRkOGQ5ODkxNjdlZjBjODE5MDkwZDA4NTg2MjBlOCIsIm5iZiI6MTczNTgwNDYxMC44NDYwMDAyLCJzdWIiOiI2Nzc2NDZjMjViOGY0MjJiNjAxMmUxNWYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.IiBc4taQH9FDBM5PuexHYruPI7a-OJ1s3BIjaR3fK9I'
+    }
+};
 
-fetch("js/details.json")
+const url = new URLSearchParams(window.location.search);
+const id = url.get('id')
+
+
+fetch(`https://api.themoviedb.org/3/movie/${id}?language=fr-FR`, options)
     .then(response => response.json())
     .then(data => {
-        showdata(data) })
+        showdata(data)
+    })
     .catch(error => console.error(error))
 
 
 function showdata(data) {
- 
-    fetch("js/credits.json")
-    .then(response => response.json())
-    .then(credit => {
-        const memberName = credit.crew.filter(member => member.job == "Writer").map(member => member.name)
 
-        const release = new Date(data.release_date)
+    fetch(`https://api.themoviedb.org/3/movie/${id}/credits?language=fr-FR`, options)
+        .then(response => response.json())
+        .then(credit => {
+            const memberName = credit.crew.filter(member => member.job == "Writer").map(member => member.name)
 
-        const datefr = release.toLocaleDateString("fr")
-    
-        const genrelist = data.genres.map(genre => genre.name).join(', ') 
-    
-        document.getElementById("oneMovie").innerHTML = `
+            const release = new Date(data.release_date)
+
+            const datefr = release.toLocaleDateString("fr")
+            const year = datefr.split("/")[2]
+
+            const genrelist = data.genres.map(genre => genre.name).join(', ')
+
+            document.getElementById("oneMovie").innerHTML = `
             <img src="https://image.tmdb.org/t/p/original/${data.poster_path}">
             <div class="film-right">
                 <div class="film-title">
-                    <h1><b>${data.original_title}</b> <span>(1999)</span></h1>
+                    <h1><b>${data.original_title}</b> <span>(${year})</span></h1>
                 </div>
                 <div class="film-info">
                     <div class="f3">
@@ -60,11 +61,11 @@ function showdata(data) {
             document.getElementById("castId").innerHTML = `
             ${createCast(credit.cast)} 
             `
-    })
+        })
 
 }
 
-function createWriters (writers){
+function createWriters(writers) {
     let myDiv = ''
     writers.forEach(element => {
         myDiv += `
@@ -79,13 +80,13 @@ function createWriters (writers){
 }
 
 
-function createCast (tableau){
+function createCast(tableau) {
     let myDiv = ''
-    let count = 10 
+    let count = 10
     tableau.forEach(element => {
         count--
-        if (count >= 0){
-            myDiv  += `
+        if (count >= 0) {
+            myDiv += `
             <div class="actors">
                 <div class="actors-profile">
                      <img src="https://image.tmdb.org/t/p/original/${element.profile_path}">
@@ -102,5 +103,3 @@ function createCast (tableau){
     return myDiv
 }
 
-const url = new URLSearchParams(window.location.search);
-const id= url.get('id')
