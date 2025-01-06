@@ -166,6 +166,9 @@ body .movies {
   padding: 50px 0px;
   gap: 1.5rem;
 }
+body .movies a {
+  text-decoration: none;
+}
 body .movies .movie-card {
   width: 280px;
   background: #fff;
@@ -175,6 +178,10 @@ body .movies .movie-card {
   justify-content: space-between;
   align-items: center;
   margin: 0px 10px;
+  color: #000;
+}
+body .movies .movie-card a {
+  text-decoration: none;
 }
 body .movies .movie-card img {
   width: 100%;
@@ -321,4 +328,49 @@ body .film .film-right .film-info .resume h2 {
 body .film .film-right .film-info .resume p {
   font-family: arimo;
   font-size: 1rem;
+}
+body .cast {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 10rem;
+  padding-bottom: 3rem;
+}
+body .cast .actors {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  align-items: center;
+  justify-content: center;
+}
+body .cast .actors .actors-profile {
+  width: 80%;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .cast .actors .actors-profile img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 100%;
+}
+body .cast .actors .actors-profile span {
+  font-family: montserrat;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px 15px;
+  text-align: center;
+}
+body .cast .actors .actors-profile p {
+  font-family: montserrat;
+  font-size: 1rem;
+  padding: 5px 15px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
