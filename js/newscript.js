@@ -9,6 +9,7 @@ const options = {
 const url = new URLSearchParams(window.location.search);
 const id = url.get('id')
 
+//premier fetch details du film
 
 fetch(`https://api.themoviedb.org/3/movie/${id}?language=fr-FR`, options)
     .then(response => response.json())
@@ -20,6 +21,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?language=fr-FR`, options)
 
 function showdata(data) {
 
+    // second fetch crédits du film
     fetch(`https://api.themoviedb.org/3/movie/${id}/credits?language=fr-FR`, options)
         .then(response => response.json())
         .then(credit => {
@@ -65,6 +67,8 @@ function showdata(data) {
 
 }
 
+// création des crédits pour les writers 
+
 function createWriters(writers) {
     let myDiv = ''
     writers.forEach(element => {
@@ -79,6 +83,7 @@ function createWriters(writers) {
     return myDiv
 }
 
+// création de la section tête d'affiches seulement 10 acteurs 
 
 function createCast(tableau) {
     let myDiv = ''

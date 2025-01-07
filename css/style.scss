@@ -115,7 +115,7 @@ body {
             font-family: montserrat;
             font-size: 2rem;
             text-transform: uppercase;
-            padding: 0px 20px;
+            padding: 0px 50px;
             font-weight: 500;
 
             @media (max-width: 575px) {
@@ -213,6 +213,18 @@ body {
                 position: relative;
                 top: -0.3rem;
                 left: 5.5rem;
+                margin-top: -2.5rem;
+            }
+
+            .date-sortie {
+                background:rgba(62, 83, 195, 1);
+                padding:8px;
+                font-family: montserrat;
+                font-size: 0.8rem;
+                color: #fff;
+                font-weight: 500;
+                border-radius: 14px;
+                position: relative;
                 margin-top: -2.5rem;
             }
 
