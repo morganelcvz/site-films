@@ -127,36 +127,59 @@ body {
             }
         }
 
+        .movie-from {
+            font-family: montserrat;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            width: 25%;
+
+            i {
+                color: rgba(62, 83, 195, 0.8);
+                font-size: 1.4rem;
+            }
+        }
+
         .search {
-            width: 70%;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
+            width:70%;
 
             @media (max-width: 575px) {
                 width: 70%;
             }
 
-            i {
-                padding: 15px;
-                border: 1.5px solid rgba(62, 83, 195, 0.8);
-                border-radius: 100%;
-                background: #fff;
+            button {
+                border:none;
+                background:transparent;
                 position: relative;
                 z-index: 2;
-                color: rgba(174, 219, 236, 1);
-                font-size: 1.5rem;
+                top:1rem;
+                left:-1rem;
+
+                i {
+                    padding: 15px;
+                    border: 1.5px solid rgba(62, 83, 195, 0.8);
+                    border-radius: 100%;
+                    background: #fff;
+                    position: relative;
+                    z-index: 2;
+                    color: rgba(174, 219, 236, 1);
+                    font-size: 1.5rem;
+                }
+
             }
 
             input {
-                width: 30%;
+                width: 80%;
                 border-radius: 20px;
                 border: 1.5px solid rgba(62, 83, 195, 0.8);
-                padding: 10px 5px 10px 35px;
+                padding: 10px 5px 10px 50px;
                 position: relative;
-                left: -2rem;
                 z-index: 1;
+                top:-2rem;
 
                 @media (max-width: 575px) {
                     width: 100%;
@@ -177,7 +200,7 @@ body {
         padding: 50px 0px;
         gap: 1.5rem;
 
-        a { 
+        a {
             text-decoration: none;
         }
 
@@ -190,12 +213,12 @@ body {
             justify-content: space-between;
             align-items: center;
             margin: 0px 10px;
-            color:#000;
+            color: #000;
 
-            a { 
+            a {
                 text-decoration: none;
             }
-            
+
             img {
                 width: 100%;
                 border-radius: 20px 20px 0px 0px;
@@ -217,15 +240,16 @@ body {
             }
 
             .date-sortie {
-                background:rgba(62, 83, 195, 1);
-                padding:8px;
+                background: rgba(62, 83, 195, 1);
+                padding: 8px;
                 font-family: montserrat;
                 font-size: 0.8rem;
                 color: #fff;
                 font-weight: 500;
                 border-radius: 14px;
                 position: relative;
-                margin-top: -2.5rem;
+                margin-top: -2rem;
+                top: -0.5rem;
             }
 
             .head-movie {
@@ -321,9 +345,9 @@ body {
             .film-info {
 
                 .f3 {
-                    display:flex;
+                    display: flex;
                     flex-direction: row;
-                    gap:3rem;
+                    gap: 3rem;
 
                     .f-info {
                         font-family: montserrat;
@@ -335,7 +359,7 @@ body {
                         font-size: 1rem;
 
                         span {
-                            font-weight:600;
+                            font-weight: 600;
                             text-transform: uppercase;
                         }
                     }
@@ -391,28 +415,28 @@ body {
     }
 
     .cast {
-        width:100%;
-        display:flex;
+        width: 100%;
+        display: flex;
         flex-direction: row;
-        gap:0rem;
+        gap: 0rem;
         align-items: flex-start;
         justify-content: center;
-        position:relative;
-        margin-top:10rem;
-        padding-bottom:3rem;
+        position: relative;
+        margin-top: 10rem;
+        padding-bottom: 3rem;
 
         .actors {
-            width:100%;
-            display:flex;
+            width: 100%;
+            display: flex;
             flex-direction: row;
-            gap:0rem;
+            gap: 0rem;
             align-items: flex-start;
             justify-content: center;
 
             .actors-profile {
-                width:80%;
-                border-radius:20px;
-                background:#fff;
+                width: 80%;
+                border-radius: 20px;
+                background: #fff;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -420,22 +444,22 @@ body {
                 img {
                     border-top-right-radius: 20px;
                     border-top-left-radius: 20px;
-                    width:100%;
+                    width: 100%;
                 }
 
                 span {
                     font-family: montserrat;
-                    font-weight:600; 
-                    font-size:1rem;
-                    padding:5px 15px;
-                    text-align:center;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    padding: 5px 15px;
+                    text-align: center;
                 }
 
                 p {
                     font-family: montserrat;
-                    font-size:1rem;
-                    padding:5px 15px;
-                    text-align:center;
+                    font-size: 1rem;
+                    padding: 5px 15px;
+                    text-align: center;
                 }
             }
         }

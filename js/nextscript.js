@@ -31,6 +31,18 @@ const options = {
             </a>
         `;
     });
+
+    const fromMin = new Date(data.dates.minimum)
+
+    const dateMinfr = fromMin.toLocaleDateString("fr")
+
+    const fromMax = new Date(data.dates.maximum)
+
+    const dateMaxfr = fromMax.toLocaleDateString("fr")
+
+    document.getElementById("from").innerHTML = `
+    <i class="fa-regular fa-calendar"></i> Entre <b>${dateMinfr}</b> et <b>${dateMaxfr}</b>
+    `
 }
 
 const url = new URLSearchParams(window.location.search);

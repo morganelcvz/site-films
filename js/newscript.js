@@ -94,7 +94,7 @@ function createCast(tableau) {
             myDiv += `
             <div class="actors">
                 <div class="actors-profile">
-                     <img src="https://image.tmdb.org/t/p/original/${element.profile_path}">
+                     <img src="${element.profile_path == null?'img/unknown.png':`https://image.tmdb.org/t/p/original/${element.profile_path}`}">
                      <br/>
                      <span>${element.name}</span>
                      <p>${element.character}</p>
@@ -107,4 +107,6 @@ function createCast(tableau) {
 
     return myDiv
 }
+
+
 

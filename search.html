@@ -18,18 +18,25 @@
     <nav>
         <div class="info-nav">
             <i class="fa-solid fa-star"></i><span><a href="index.html">star-ring</a></span> <a href="index.html">A l'affiche</a>
-            <a href="#">Prochaines sorties</a>
+            <a href="sorties.html">Prochaines sorties</a>
         </div>
         <div class="connect"><a href="#">connexion</a><i class="fa-solid fa-user"></i></div>
     </nav>
-    <section class="film" id="oneMovie">
+    <section class="movie-top">
+        <div class="title"><i class="fa-solid fa-video"></i> Recherche de films</div>
+        <div class="search">
+            <form action="search.html">
+            <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" name="searchMovie" id="search" name="search" />
+            </form>
+        </div>
+    </section>
+    <section class="movies" id="myMovies">
 
     </section>
-    <section class="cast" id="castId">
-
-    </section>
-
-    <script src="js/newscript.js"></script>
+    <script src="js/searchscript.js"></script>
 </body>
 
 </html>

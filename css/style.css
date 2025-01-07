@@ -121,19 +121,38 @@ body .movie-top .title {
 body .movie-top .title i {
   color: rgba(62, 83, 195, 0.8);
 }
+body .movie-top .movie-from {
+  font-family: montserrat;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  width: 25%;
+}
+body .movie-top .movie-from i {
+  color: rgba(62, 83, 195, 0.8);
+  font-size: 1.4rem;
+}
 body .movie-top .search {
-  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 70%;
 }
 @media (max-width: 575px) {
   body .movie-top .search {
     width: 70%;
   }
 }
-body .movie-top .search i {
+body .movie-top .search button {
+  border: none;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  top: 1rem;
+  left: -1rem;
+}
+body .movie-top .search button i {
   padding: 15px;
   border: 1.5px solid rgba(62, 83, 195, 0.8);
   border-radius: 100%;
@@ -144,13 +163,13 @@ body .movie-top .search i {
   font-size: 1.5rem;
 }
 body .movie-top .search input {
-  width: 30%;
+  width: 80%;
   border-radius: 20px;
   border: 1.5px solid rgba(62, 83, 195, 0.8);
-  padding: 10px 5px 10px 35px;
+  padding: 10px 5px 10px 50px;
   position: relative;
-  left: -2rem;
   z-index: 1;
+  top: -2rem;
 }
 @media (max-width: 575px) {
   body .movie-top .search input {
@@ -210,7 +229,8 @@ body .movies .movie-card .date-sortie {
   font-weight: 500;
   border-radius: 14px;
   position: relative;
-  margin-top: -2.5rem;
+  margin-top: -2rem;
+  top: -0.5rem;
 }
 body .movies .movie-card .head-movie {
   display: flex;
