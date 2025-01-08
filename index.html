@@ -12,13 +12,27 @@
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/dd845416b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
 </head>
 
 <body>
     <nav>
         <div class="info-nav">
-            <i class="fa-solid fa-star"></i><span><a href="index.html">star-ring</a></span> <a href="index.html">A l'affiche</a>
-            <a href="sorties.html">Prochaines sorties</a>
+            <i class="fa-solid fa-star"></i><span><a href="index.html">star-ring</a></span> <a href="index.html"
+                id="affiche">A l'affiche</a>
+            <a href="sorties.html" id="sorties">Prochaines sorties</a>
+            <div class="dropdown">
+                <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index.html">A l'affiche</a></li>
+                    <li><a class="dropdown-item" href="sorties.html">Prochaines sorties</a></li>
+                    <li><a class="dropdown-item" href="search.html">Recherche</a></li>
+                    <li><a class="dropdown-item" href="#">Connexion</a></li>
+                </ul>
+            </div>
         </div>
         <div class="connect"><a href="#">connexion</a><i class="fa-solid fa-user"></i></div>
     </nav>
@@ -26,10 +40,10 @@
         <div class="title"><i class="fa-solid fa-video"></i> Films à l'affiche</div>
         <div class="search">
             <form action="search.html">
-            <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <input type="text" name="searchMovie" id="search"/>
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" name="searchMovie" id="search" />
             </form>
         </div>
     </section>
@@ -37,6 +51,8 @@
 
     </section>
     <script src="js/script.js"></script>
+    <script src="node_modules\@popperjs\core\dist\umd\popper.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
 </body>
 
 </html>

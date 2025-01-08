@@ -38,18 +38,18 @@ function showdata(data) {
             <img src="https://image.tmdb.org/t/p/original/${data.poster_path}">
             <div class="film-right">
                 <div class="film-title">
-                    <h1><b>${data.original_title}</b> <span>(${year})</span></h1>
+                    <h1><b>${data.title}</b> <span>(${year})</span></h1>
                 </div>
                 <div class="film-info">
                     <div class="f3">
-                                    <div class="note"><i class="fa-regular fa-star"></i><span>${data.vote_average}</span></div>
-                        <div class="f-info">
-                            <p class="genre">${genrelist}</p>
-                            <p class="date">${datefr}</p>
+                        <div class="f-row">
+                            <div class="note"><i class="fa-regular fa-star"></i><span>${data.vote_average}</span></div>
+                            <div class="f-info">
+                             <p class="genre">${genrelist}</p>
+                             <p class="date">sorti le : <span>${datefr}</span></p>
+                            </div>
                         </div>
-
                         ${createWriters(memberName)}
-                        
                     </div>
     
                     <div class="resume">

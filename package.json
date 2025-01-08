@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "moment": "^2.30.1"
-  }
+  },
+  "name": "site-films",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

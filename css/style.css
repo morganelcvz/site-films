@@ -16,15 +16,16 @@ body nav {
   flex-direction: row;
   justify-content: space-between;
   height: 80px;
-  overflow: hidden;
   gap: 3rem;
   position: fixed;
   z-index: 99;
+  /***DROPDOWN MENU NAV BARRE***/
 }
 @media (max-width: 575px) {
   body nav {
     gap: 2rem;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 body nav .info-nav {
@@ -33,6 +34,13 @@ body nav .info-nav {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+@media (max-width: 575px) {
+  body nav .info-nav {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 body nav .info-nav i {
   font-size: 4.5rem;
@@ -46,15 +54,19 @@ body nav .info-nav a {
   font-size: 1.5rem;
 }
 @media (max-width: 575px) {
-  body nav .info-nav a {
-    font-size: 1.2rem;
+  body nav .info-nav #sorties {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  body nav .info-nav #affiche {
+    display: none;
   }
 }
 body nav .info-nav span {
   padding: 20px;
   position: relative;
   margin-left: -5.8rem;
-  width: 230px;
 }
 body nav .info-nav span a {
   font-size: 2.4rem;
@@ -68,7 +80,9 @@ body nav .info-nav span a {
 }
 @media (max-width: 575px) {
   body nav .info-nav span a {
-    font-size: 2rem;
+    font-size: 2.4rem;
+    position: relative;
+    left: -2.5rem;
   }
 }
 body nav .connect {
@@ -78,6 +92,11 @@ body nav .connect {
   align-items: center;
   gap: 0.8rem;
   padding: 0px 15px;
+}
+@media (max-width: 575px) {
+  body nav .connect {
+    display: none;
+  }
 }
 body nav .connect a {
   font-family: montserrat;
@@ -89,6 +108,22 @@ body nav .connect a {
 body nav .connect i {
   color: rgba(174, 219, 236, 0.8);
   font-size: 2.5rem;
+}
+body nav .dropdown-toggle {
+  border: 0px;
+  display: none;
+}
+@media (max-width: 575px) {
+  body nav .dropdown-toggle {
+    display: block;
+  }
+}
+body nav .dropdown-toggle i {
+  color: rgba(174, 219, 236, 0.8);
+  font-size: 1.6rem;
+}
+body nav .dropdown-toggle .dropdown-menu {
+  position: absolute;
 }
 body .movie-top {
   width: 100%;
@@ -115,10 +150,29 @@ body .movie-top .title {
 }
 @media (max-width: 575px) {
   body .movie-top .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    text-align: center;
   }
 }
 body .movie-top .title i {
+  color: rgba(62, 83, 195, 0.8);
+}
+body .movie-top .title2 {
+  font-family: montserrat;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0px 50px;
+  font-weight: 500;
+  width: 53%;
+}
+@media (max-width: 575px) {
+  body .movie-top .title2 {
+    font-size: 2.2rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+body .movie-top .title2 i {
   color: rgba(62, 83, 195, 0.8);
 }
 body .movie-top .movie-from {
@@ -126,7 +180,14 @@ body .movie-top .movie-from {
   font-weight: 500;
   font-size: 1.1rem;
   text-transform: uppercase;
-  width: 25%;
+  width: 40%;
+}
+@media (max-width: 575px) {
+  body .movie-top .movie-from {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 body .movie-top .movie-from i {
   color: rgba(62, 83, 195, 0.8);
@@ -141,7 +202,9 @@ body .movie-top .search {
 }
 @media (max-width: 575px) {
   body .movie-top .search {
-    width: 70%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
 body .movie-top .search button {
@@ -149,7 +212,7 @@ body .movie-top .search button {
   background: transparent;
   position: relative;
   z-index: 2;
-  top: 1rem;
+  top: 1.2rem;
   left: -1rem;
 }
 body .movie-top .search button i {
@@ -216,9 +279,9 @@ body .movies .movie-card .date-movie {
   padding: 10px;
   border-radius: 15px;
   position: relative;
-  top: -0.3rem;
+  top: -0.8rem;
   left: 5.5rem;
-  margin-top: -2.5rem;
+  margin-top: -2rem;
 }
 body .movies .movie-card .date-sortie {
   background: rgb(62, 83, 195);
@@ -229,16 +292,16 @@ body .movies .movie-card .date-sortie {
   font-weight: 500;
   border-radius: 14px;
   position: relative;
-  margin-top: -2rem;
-  top: -0.5rem;
+  top: -1rem;
+  margin-top: -1.8rem;
 }
 body .movies .movie-card .head-movie {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0px;
-  justify-content: center;
   padding: 10px;
+  justify-content: center;
+  gap: 1rem;
 }
 body .movies .movie-card .head-movie .note {
   border-radius: 100%;
@@ -285,20 +348,43 @@ body .film {
   justify-content: center;
   align-items: flex-start;
 }
+@media (max-width: 575px) {
+  body .film {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 body .film img {
   width: 20%;
   border-radius: 20px;
   border: 10px solid #fff;
+}
+@media (max-width: 575px) {
+  body .film img {
+    width: 100%;
+  }
 }
 body .film .film-right {
   display: flex;
   flex-direction: column;
   width: 70%;
 }
+@media (max-width: 575px) {
+  body .film .film-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 body .film .film-right .film-title {
   font-family: montserrat;
   font-size: 2rem;
-  line-height: 100%;
+  line-height: 3rem;
+}
+@media (max-width: 575px) {
+  body .film .film-right .film-title {
+    text-align: center;
+  }
 }
 body .film .film-right .film-title b {
   font-weight: 800;
@@ -309,21 +395,39 @@ body .film .film-right .film-title span {
 body .film .film-right .film-info .f3 {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 2rem;
+  padding: 20px 0px;
 }
-body .film .film-right .film-info .f3 .f-info {
+@media (max-width: 575px) {
+  body .film .film-right .film-info .f3 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+body .film .film-right .film-info .f3 .f-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 20px 0px;
+}
+@media (max-width: 575px) {
+  body .film .film-right .film-info .f3 .f-row {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+body .film .film-right .film-info .f3 .f-row .f-info {
   font-family: montserrat;
   font-size: 1rem;
 }
-body .film .film-right .film-info .f3 .f-staff {
-  font-family: montserrat;
-  font-size: 1rem;
+body .film .film-right .film-info .f3 .f-row .date span {
+  background: rgba(62, 83, 195, 0.4);
+  padding: 8px;
+  border-radius: 15px;
+  font-weight: 500;
 }
-body .film .film-right .film-info .f3 .f-staff span {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-body .film .film-right .film-info .note {
+body .film .film-right .film-info .f3 .note {
   border-radius: 100%;
   padding: 15px;
   background: #fff;
@@ -332,17 +436,17 @@ body .film .film-right .film-info .note {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border: 5px solid #fff;
 }
-body .film .film-right .film-info .note i {
+body .film .film-right .film-info .f3 .note i {
   color: rgb(174, 219, 236);
   font-size: 4rem;
   position: relative;
-  top: 0.5rem;
+  top: 0.7rem;
 }
-body .film .film-right .film-info .note span {
+body .film .film-right .film-info .f3 .note span {
   font-family: montserrat;
   color: rgba(62, 83, 195, 0.8);
   font-weight: 800;
@@ -351,6 +455,14 @@ body .film .film-right .film-info .note span {
   -webkit-text-stroke: 3px #fff;
   position: relative;
   top: -2rem;
+}
+body .film .film-right .film-info .f-staff {
+  font-family: montserrat;
+  font-size: 1rem;
+}
+body .film .film-right .film-info .f-staff span {
+  font-weight: 600;
+  text-transform: uppercase;
 }
 body .film .film-right .film-info .resume h2 {
   font-family: montserrat;
@@ -371,6 +483,12 @@ body .cast {
   margin-top: 10rem;
   padding-bottom: 3rem;
 }
+@media (max-width: 575px) {
+  body .cast {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
 body .cast .actors {
   width: 100%;
   display: flex;
@@ -378,6 +496,13 @@ body .cast .actors {
   gap: 0rem;
   align-items: flex-start;
   justify-content: center;
+}
+@media (max-width: 575px) {
+  body .cast .actors {
+    flex-wrap: wrap;
+    width: 50%;
+    margin-bottom: 2rem;
+  }
 }
 body .cast .actors .actors-profile {
   width: 80%;
